@@ -40,13 +40,13 @@
 								<li>
 									<!-- Full Name -->
 									<label for="full-name">Full Name</label>
-									<input type="text" id="full-name" name="full_name" placeholder="Required" />
+									<input type="text" id="full-name" name="full_name" placeholder="Required" required/>
 								</li>
 													
 								<li>
 									<!-- Email Address -->
 									<label for="email">Email Address</label>
-									<input type="email" id="email" name="email" placeholder="Required" />
+									<input type="email" id="email" name="email" placeholder="Required" required/>
 								</li>
 													
 								<li>
@@ -58,13 +58,13 @@
 								<li>
 									<!-- Street Address -->
 									<label for="address">Street Address</label>
-									<input type="text" id="address" name="address" placeholder="Required" />
+									<input type="text" id="address" name="address" placeholder="Required" required/>
 								</li>
 													
 								<li>
 									<!-- City -->
 									<label for="city">City</label>
-									<input type="text" id="city" name="city" placeholder="Required" />
+									<input type="text" id="city" name="city" placeholder="Required" required/>
 								</li>
 													
 								<li>
@@ -146,10 +146,45 @@
 								<li>
 									<!-- Zip Code -->
 									<label for="zipcode">Zip Code</label>
-									<input type="text" id="zipcode" name="zipcode" placeholder="Required" />
+									<input type="text" id="zipcode" name="zipcode" placeholder="Required" required/>
 								</li>
 							</ul>
 						</div>
+					</fieldset>
+				</div>
+
+				<div class="wrapper">
+					<fieldset class="profile">
+						<legend>Profile</legend>
+
+							<!-- Profile -->
+							<label class="sub-heading">Help us learn more about you</label>
+							
+							<div class="form-group">
+								<ul class="profile-details">
+									<li>
+										<label for="nickname">Nickname</label>
+										<input type="text" id="nickname" name="nickname" placeholder="Optional" />
+									</li>
+									
+									<li>
+										<label for="age">Age</label>
+										<input type="number" id="age" name="age" placeholder="Optional" />
+									</li>
+									
+									<label>Gender</label>
+									<li>
+										<input type="radio" id="male" name="gender" value="male" />
+										<label for="male"> Male</label>
+									</li>
+									
+									<li>
+										<input type="radio" id="female" name="gender" value="female" />
+										<label for="female"> Female</label>
+									</li>
+
+								</ul>
+							</div>
 					</fieldset>
 				</div>
 				
@@ -186,19 +221,19 @@
 							<div class="form-group">
 								<ul class="form-newsletter__format">
 									<li>
-										<input type="radio" id="html" name="newsletter_format" value="html" />
-										<label for="html"> HTML</label>
+										<input type="radio" id="html" name="newsletter_format" value="html"  required/>
+										<label for="html" required> HTML</label>
 									</li>
 									
 									<li>
-										<input type="radio" id="plain-text" name="newsletter_format" value="plain_text">
+										<input type="radio" id="plain-text" name="newsletter_format" value="plain_text" required>
 										<label for="plain-text"> Plain Text</label>
 									</li>
 									
 									<!-- Other topics -->
 									<li>
 										<label class="sub-heading" for="other-topics">Other Topics you'd like to hear about</label>
-										<textarea name="other_topics" id="other-topics" placeholder="Please enter other topics of interest here..."></textarea>
+										<textarea name="other_topics" id="other-topics" placeholder="Please enter other topics of interest here..." required></textarea>
 									</li>
 								</ul>
 							</div>

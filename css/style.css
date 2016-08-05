@@ -91,6 +91,7 @@ label {
 	color: gray;
 	font-size: 0.7em;
 	margin-bottom: 0.4em;
+	flex: 1 0 100%;
 }
 
 .form .wrapper {
@@ -115,49 +116,37 @@ legend {
 	flex-wrap: wrap;
 }
 
-.form-fields input[type="text"],
-.form-fields input[type="email"],
-.form-fields input[type="tel"],
-.form-fields input[type="number"],
-.form-fields select,
-.form-newsletter__receive input[type="checkbox"],
-.form-newsletter__format input[type="radio"],
-.form-newsletter__format textarea {
-	flex: 1 0 230px;
+input,
+select,
+textarea {
 	padding: 1em 0.8em;
 	background-color: rgb(235, 235, 235);
 	border: none;
 	border-radius: 5px;
+	flex: 1 0 230px;
+	
+	transition: background-color 0.3s ease-in;
 }
 
-.form-fields input[type="text"]:focus,
-.form-fields input[type="email"]:focus,
-.form-fields input[type="tel"]:focus,
-.form-fields input[type="number"]:focus,
-.form-fields input[type="checkbox"]:focus,
-.form-fields input[type="radio"]:focus,
-.form-fields select:focus,
-.form-newsletter__format textarea:focus {
+input:focus,
+select:focus,
+textarea:focus  {
 	border: 1px solid rgb(45, 57, 69);
-	background-color: rgb(230, 230, 230);
+	background-color: rgb(225, 225, 225);
 	outline: none;
-}
-
-label {
-	flex: 1 0 100%;
 }
 
 .sub-heading {
 	font-size: 0.8em;
 }
 
-.form-fields input,
-.form-fields select,
+input,
+select,
 .form-newsletter__format textarea {
 	margin-bottom: 1em;
 }
 
-select{
+select {
  -webkit-appearance: none;
  -moz-appearance: none;
  appearance: none;
@@ -189,7 +178,24 @@ option[value=""][disabled] {
   font-style: italic;
 }
 
+/* --- Profile Section --- */
+.profile-details {
+	margin: 1em 0;
+}
 
+.profile-details li {
+	flex-wrap: wrap;
+	display: flex;
+}
+
+.profile-details li:nth-child(3),
+.profile-details li:nth-child(4) {
+	display: block;
+}
+
+.profile-details li:last-child {
+	margin-top: 0.5em;
+}
 
 /* --- Newsletter Section --- */
 .form-newsletter__receive li {
@@ -251,17 +257,17 @@ footer p {
 
 	/* === Form === */
 	/* --- Contact Information Section --- */
-	.form-fields li {
+	li {
 		margin-bottom: 1em;
 	}
 
-	.form-fields label {
+	label {
 		flex: 1 0 100px;
 		margin: auto;
 		max-width: 100px;
 	}
 
-	.form-fields input {
+	input {
 		margin: auto;
 	}
 
@@ -276,14 +282,6 @@ footer p {
 
 	input#zipcode {
 		margin-left: 0;
-	}
-
-
-	.newsletter label {
-		font-size: 1em;
-	}
-	.sub-heading {
-		font-size: 0.5em;
 	}
 
 }
