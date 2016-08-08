@@ -78,8 +78,14 @@ p {
 	color: gray;
 }
 
-
 /* === Form === */
+.contact-information,
+.profile,
+.newsletter {
+	background: linear-gradient(73deg, transparent 70%, rgb(78, 187, 181));
+	padding-right: 0.5em;
+}
+
 /* --- Contact Information Section --- */
 .form-flex {
 	display: flex;
@@ -96,18 +102,19 @@ fieldset {
 	font-weight: bold;
 }
 
-label {
+label,
+.gender {
 	font-weight: normal;
 	color: gray;
-	font-size: 0.7em;
 	margin-bottom: 0.4em;
 	flex: 1 0 100%;
+	font-size: 0.7em;
 }
 
 .form-section {
 	border-top: 3px solid rgb(45, 57, 69);
+	padding-right: 0.5em;
 }
-
 
 legend {
 	padding: 1em 0;
@@ -138,15 +145,15 @@ input:focus,
 select:focus,
 textarea:focus  {
 	border: 1px solid rgb(45, 57, 69);
-	background-color: rgb(200, 200, 200);
+	background-color: rgb(250, 250, 250);
 	outline: none;
 	
 	animation: borderPlus 0.3s ease-in;
 }
 
 @keyframes borderPlus {
-	0% { box-shadow: 1px 1px 3px 5px rgb(45, 57, 69); }
-	50% { box-shadow: 2px 2px 5px 10px rgb(45, 57, 69); }
+	0% { box-shadow: 1px 1px 2px 4px rgb(45, 57, 69); }
+	50% { box-shadow: 2px 2px 3px 6px rgb(45, 57, 69); }
 }
 
 .sub-heading {
@@ -258,8 +265,7 @@ footer p {
 	font-style: italic;
 	font-size: 0.9em;
 	text-align: center;
-	padding: 1.5em 0;
-	font-weight: lighter;
+	padding: 1.5em 0 5em 0;
 }
 
 
@@ -280,9 +286,9 @@ footer p {
 	}
 
 	label {
-		max-width: 100px;
 		flex: 1 0 100px;
 		margin: auto;
+		max-width: 100px;
 	}
 
 	input {
@@ -306,33 +312,32 @@ footer p {
 
 }
 
-
-
-
-
-
-
-
 /* ===================================================
---- Large devices (large desktops, 1200px and up) ---
+--- Large devices (large desktops, 1024px and up) ---
 =================================================== */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
 	
 	.wrapper {
 		width: 60%;
+		max-width: 1200px;
 	}
 
 	.form-section.contact-information {
 		border-right: none;
 		flex: 1 0 100%;
-		/*margin: 0 0.5em 0 0;*/
-		/*padding: 0 0.5em 0 0;*/
 	}
 
 	.form-section {
-		flex: 1;
+		flex: 1 0 50%;
 		padding: 0 1em;
 		border-right: 3px solid rgb(45, 57, 69);
+	}
+
+	label[for="nickname"],
+	label[for="age"] {
+		flex: 1 0 100%;
+		max-width: 100%;
+		margin-bottom: 0.3em;
 	}
 
 	.form-section.newsletter {
@@ -340,5 +345,9 @@ footer p {
 		margin-right: 0;
 	}
 
+	button {
+		margin: 1em auto;
+		width: 50%;
+	}
 
 }
