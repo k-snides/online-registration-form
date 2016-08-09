@@ -36,11 +36,6 @@ button {
 	margin: 0 auto;
 }
 
-/* --- Flexbox --- */
-.flex {
-	display: flex;
-}
-
 /* --- Header Section --- */
 header {
 	background-color: rgb(45, 57, 69);
@@ -79,12 +74,6 @@ p {
 }
 
 /* === Form === */
-/* --- Contact Information Section --- */
-.contact-information {
-	background: linear-gradient(73deg, transparent 70%, rgba(78, 187, 181, 0.9)),
-	            url(../img/contact_us.png) no-repeat 95% 0%;
-}
-
 .form-flex {
 	display: flex;
 	flex-wrap: wrap;
@@ -122,66 +111,6 @@ legend {
 	flex: 1 0 300px;
 }
 
-.form-fields li {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-input,
-select,
-textarea {
-	padding: 1em 0.8em;
-	background-color: rgb(235, 235, 235);
-	border: none;
-	border-radius: 5px;
-	
-	transition: background-color 0.6s ease-in;
-	flex: 1 0 230px;
-}
-
-input:focus,
-select:focus,
-textarea:focus  {
-	border: 1px solid rgb(45, 57, 69);
-	background-color: rgb(250, 250, 250);
-	outline: none;
-	
-	animation: borderPlus 0.3s ease-in;
-}
-
-@keyframes borderPlus {
-	0% { box-shadow: 1px 1px 2px 4px rgb(45, 57, 69); }
-	50% { box-shadow: 2px 2px 3px 6px rgb(45, 57, 69); }
-}
-
-.sub-heading {
-	font-size: 0.8em;
-}
-
-input,
-select,
-textarea {
-	margin-bottom: 1em;
-}
-
-select {
- -webkit-appearance: none;
- -moz-appearance: none;
- appearance: none;
-}
-
-select:required:invalid {
-  color: gray;
-}
-
-option[value=""][disabled] {
-  display: none;
-}
-
-#zipcode {
-	max-width: 120px;
-}
-
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	font-style: italic;
 	text-align: right;
@@ -201,6 +130,67 @@ option[value=""][disabled] {
   font-style: italic;
   text-align: right;
   padding-right: 0.2em;
+}
+
+/* --- Contact Information Section --- */
+.contact-information {
+	background: linear-gradient(73deg, transparent 70%, rgba(78, 187, 181, 0.9)),
+	            url(../img/contact_us.png) no-repeat 95% 0%;
+}
+
+.form-fields li {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+input,
+select,
+textarea {
+	padding: 1em 0.8em;
+	background-color: rgb(235, 235, 235);
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	
+	transition: background-color 0.6s ease-in;
+	flex: 1 0 230px;
+}
+
+input:focus,
+select:focus,
+textarea:focus  {
+	border: 1px solid rgb(45, 57, 69);
+	background-color: rgb(250, 250, 250);
+	outline: none;
+	
+	animation: borderPlus 0.3s linear;
+}
+
+@keyframes borderPlus {
+	0% { box-shadow: 1px 1px 2px 4px rgb(45, 57, 69); }
+	50% { box-shadow: 2px 2px 3px 6px rgb(45, 57, 69); }
+}
+
+.sub-heading {
+	font-size: 0.8em;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select:required:invalid {
+  color: gray;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+#zipcode {
+	max-width: 120px;
 }
 
 /* --- Profile Section --- */
@@ -304,7 +294,7 @@ footer p {
 	}
 
 	input {
-	margin: auto;
+		margin: auto;
 	}
 
 	label[for="zipcode"],
@@ -345,10 +335,10 @@ footer p {
 		max-width: 1200px;
 	}
 
-	/*button {
+	button {
 		margin: 1em auto;
 		width: 50%;
-	}*/
+	}
 
 	/* === Form === */
 	.form-section {
@@ -388,6 +378,5 @@ footer p {
 		border-right: none;
 		margin-right: 0;
 	}
-
 
 }
