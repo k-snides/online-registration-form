@@ -79,14 +79,12 @@ p {
 }
 
 /* === Form === */
-.contact-information,
-.profile,
-.newsletter {
-	background: linear-gradient(73deg, transparent 70%, rgb(78, 187, 181));
-	padding-right: 0.5em;
+/* --- Contact Information Section --- */
+.contact-information {
+	background: linear-gradient(73deg, transparent 70%, rgba(78, 187, 181, 0.9)),
+	            url(../img/contact_us.png) no-repeat 95% 0%;
 }
 
-/* --- Contact Information Section --- */
 .form-flex {
 	display: flex;
 	flex-wrap: wrap;
@@ -187,18 +185,30 @@ option[value=""][disabled] {
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	font-style: italic;
 	text-align: right;
+	padding-right: 0.2em;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   font-style: italic;
+  text-align: right;
+  padding-right: 0.2em;
 }
 :-ms-input-placeholder { /* IE 10+ */
   font-style: italic;
+  text-align: right;
+  padding-right: 0.2em;
 }
 :-moz-placeholder { /* Firefox 18- */
   font-style: italic;
+  text-align: right;
+  padding-right: 0.2em;
 }
 
 /* --- Profile Section --- */
+.profile {
+	background: linear-gradient(73deg, transparent 70%, rgba(78, 187, 181, 0.9)),
+	            url(../img/profile.png) no-repeat 95% 1%;
+}
+
 .profile-details {
 	margin: 1em 0;
 }
@@ -223,6 +233,11 @@ option[value=""][disabled] {
 }
 
 /* --- Newsletter Section --- */
+.newsletter {
+	background: linear-gradient(73deg, transparent 70%, rgba(78, 187, 181, 0.9)),
+	            url(../img/newsletter.png) no-repeat 95% 1%;
+}
+
 .form-newsletter__receive li {
 	margin: 0.5em 0;
 }
@@ -259,7 +274,6 @@ textarea:-moz-placeholder { /* Firefox 18- */
   text-align: left;
 }
 
-
 /* --- Footer Section --- */
 footer p {
 	font-style: italic;
@@ -267,7 +281,6 @@ footer p {
 	text-align: center;
 	padding: 1.5em 0 5em 0;
 }
-
 
 /* ===================================================
 --- Medium devices (tablets, 760px and up) ---
@@ -280,7 +293,6 @@ footer p {
 	}
 
 	/* === Form === */
-	/* --- Contact Information Section --- */
 	li {
 		margin-bottom: 1em;
 	}
@@ -295,10 +307,6 @@ footer p {
 	margin: auto;
 	}
 
-	.form-fields select{
-		margin-bottom: 0;
-	}
-
 	label[for="zipcode"],
 	label[for="age"] {
 		margin-left: 0;
@@ -310,6 +318,20 @@ footer p {
 		margin-left: 0;
 	}
 
+	/* --- Contact Information Section --- */
+	select {
+		margin-bottom: 0;
+	}
+
+	/* --- Profile Section --- */
+	.profile {
+		background-position: 95% 5%;
+	}
+
+	/* --- Newsletter Section --- */
+	.newsletter {
+		background-position: 95% 5%;
+	}
 }
 
 /* ===================================================
@@ -317,9 +339,27 @@ footer p {
 =================================================== */
 @media screen and (min-width: 1024px) {
 	
+	/* --- General Styles --- */
 	.wrapper {
 		width: 60%;
 		max-width: 1200px;
+	}
+
+	/*button {
+		margin: 1em auto;
+		width: 50%;
+	}*/
+
+	/* === Form === */
+	.form-section {
+		flex: 1 0 50%;
+		padding: 0 1em;
+		border-right: 3px solid rgb(45, 57, 69);
+	}
+
+	/* --- Contact Information Section --- */
+	.contact-information {
+		background-position: 97% 0%;
 	}
 
 	.form-section.contact-information {
@@ -327,10 +367,9 @@ footer p {
 		flex: 1 0 100%;
 	}
 
-	.form-section {
-		flex: 1 0 50%;
-		padding: 0 1em;
-		border-right: 3px solid rgb(45, 57, 69);
+	/* --- Profile Section --- */
+	.profile {
+		background-position: 95% 1%;
 	}
 
 	label[for="nickname"],
@@ -339,15 +378,16 @@ footer p {
 		max-width: 100%;
 		margin-bottom: 0.3em;
 	}
+	
+	/* --- Newsletter Section --- */
+	.newsletter {
+		background-position: 95% 1%;
+	}
 
 	.form-section.newsletter {
 		border-right: none;
 		margin-right: 0;
 	}
 
-	button {
-		margin: 1em auto;
-		width: 50%;
-	}
 
 }
