@@ -331,30 +331,28 @@ footer p {
 	
 	/* --- General Styles --- */
 	.wrapper {
-		width: 60%;
+		width: 90%;
 		max-width: 1200px;
 	}
 
 	button {
 		margin: 1em auto;
+		display: flex;
+		justify-content: center;
 		width: 50%;
 	}
 
 	/* === Form === */
 	.form-section {
-		flex: 1 0 50%;
+		flex: 1 0 25%;
 		padding: 0 1em;
-		border-right: 3px solid rgb(45, 57, 69);
 	}
 
 	/* --- Contact Information Section --- */
 	.contact-information {
 		background-position: 97% 0%;
-	}
-
-	.form-section.contact-information {
-		border-right: none;
-		flex: 1 0 100%;
+		flex: 1 0 50%;
+		padding-left: 0;
 	}
 
 	/* --- Profile Section --- */
@@ -367,6 +365,10 @@ footer p {
 		flex: 1 0 100%;
 		max-width: 100%;
 		margin-bottom: 0.3em;
+	}
+
+	input#nickname {
+		flex: 1 0 200px;
 	}
 	
 	/* --- Newsletter Section --- */
